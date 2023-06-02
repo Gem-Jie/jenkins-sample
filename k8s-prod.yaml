@@ -13,8 +13,10 @@ spec:
       labels:
         app: jenkins-demo
     spec:
+       imagePullSecrets:
+      - name: aliyun-registry
       containers:
-      - image: xianchao/jenkins-demo:<BUILD_TAG>
+      - image: registry.cn-hangzhou.aliyuncs.com/k8s-zhao/k8s-test:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
         name: jenkins-demo
         env:
