@@ -13,7 +13,7 @@ spec:
       labels:
         app: jenkins-demo
     spec:
-       imagePullSecrets:
+      imagePullSecrets:
       - name: aliyun-registry
       containers:
       - image: registry.cn-hangzhou.aliyuncs.com/k8s-zhao/k8s-test:<BUILD_TAG>
